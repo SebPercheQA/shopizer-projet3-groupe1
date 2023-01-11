@@ -1,3 +1,10 @@
+Toto Tests Pipeline : projet 3 EQL
+---
+- Kasia
+- Lionel
+- Sébastien
+
+-------------------
 Shopizer (for java 1.8 +)
 -------------------
 [![last_version](https://img.shields.io/badge/last_version-v2.7.0-blue.svg?style=flat)](https://github.com/shopizer-ecommerce/shopizer/tree/2..6.0)
