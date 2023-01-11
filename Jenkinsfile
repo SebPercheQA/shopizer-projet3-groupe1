@@ -1,6 +1,6 @@
 pipeline {
-  {
-    stages { agent { label 'linux-vmsonar' }
+    agent any
+    stages {
         stage('SCM') {
             steps {
                 git url: 'https://github.com/SebPercheQA/shopizer-projet3-groupe1.git'
@@ -11,11 +11,7 @@ pipeline {
                 withSonarQubeEnv('My SonarQube Server') {
                     // Optionally use a Maven environment you've configured already
                     withMaven(maven:'maven3.6_local_VMagent') {
-                        sh 'sudo mvn clean verify sonar:sonar \
-                            -Dsonar.projectKey=shopizerquality \
-                            -Dsonar.host.url=http://192.168.102.142:9000 \
-                            -Dsonar.login=a831ae73f120379d1280433a62d5665be38a87af'
-                    
+                        sh 'mvn clean package sonar:sonar'
                     }
                 }
             }
@@ -30,6 +26,4 @@ pipeline {
             }
         }
     }
-}
-
 }
