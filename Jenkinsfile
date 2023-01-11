@@ -1,6 +1,6 @@
 pipeline {
-  agent { label 'linux-vmsonar' } {
-    stages {
+  {
+    stages { agent { label 'linux-vmsonar' }
         stage('SCM') {
             steps {
                 git url: 'https://github.com/SebPercheQA/shopizer-projet3-groupe1.git'
