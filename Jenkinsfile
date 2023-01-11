@@ -1,5 +1,5 @@
 pipeline {
-  node("linux-vmsonar") {
+  agent { node { label 'linux-vmsonar' } } {
     stages {
         stage('SCM') {
             steps {
