@@ -1,12 +1,14 @@
 pipeline {
     agent any
-    stages { agent { label 'linux-vmsonar' }
-        stage('SCM') {
+    stages { 
+        stage('SCM') { 
+            agent { label 'linux-vmsonar' }
             steps {
                 git url: 'https://github.com/SebPercheQA/shopizer-projet3-groupe1.git'
             }
         }
         stage('build && SonarQube analysis') {
+            agent { label 'linux-vmsonar' }
             steps {
                 withSonarQubeEnv('My SonarQube Server') {
                     // Optionally use a Maven environment you've configured already
@@ -17,6 +19,7 @@ pipeline {
             }
         }
         stage("Quality Gate") {
+            agent { label 'linux-vmsonar' }
             steps {
                 timeout(time: 1, unit: 'HOURS') {
                     // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
