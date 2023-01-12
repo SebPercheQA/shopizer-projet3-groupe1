@@ -1,6 +1,6 @@
 Toto Tests Pipeline : projet 3 EQL
 ---
-- Kasia - Autocmaticienne 
+- Kasia - Automaticienne 
 - Lionel - Automaticien 
 - Sébastien - Automaticien
 
