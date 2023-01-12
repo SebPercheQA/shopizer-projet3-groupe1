@@ -1,8 +1,8 @@
 Toto Tests Pipeline : projet 3 EQL
 ---
-- Kasia
-- Lionel
-- Sébastien
+- Kasia - Autocmaticienne 
+- Lionel - Automaticien 
+- Sébastien - Automaticien
 
 -------------------
 Shopizer (for java 1.8 +)
